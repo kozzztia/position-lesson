@@ -1,19 +1,19 @@
-# if [ -z "$1" ]
-# then
-#   echo "Пожалуйста, укажите сообщение коммита"
-#   exit 1
-# fi
+if [ -z "$1" ]
+then
+  echo "Пожалуйста, укажите сообщение коммита"
+  exit 1
+fi
 
-git init
-git add .
-git commit -m "initial commit"
-git branch -M main
-git remote add origin git@github.com:kozzztia/position-lesson.git
-git push -u origin main
-
+# git init
 # git add .
-# git commit -m "$1"
-# git push
+# git commit -m "initial commit"
+# git branch -M main
+# git remote add origin git@github.com:kozzztia/position-lesson.git
+# git push -u origin main
+
+git add .
+git commit -m "$1"
+git push
 
 echo "Всё готово!"
 
