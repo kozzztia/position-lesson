@@ -1,0 +1,50 @@
+:root{
+    --background-color: rgba(255,255,255,1);
+    --text-color:rgba(218, 218, 218, 1);
+    --text-size: 28px;
+    --title-size: 36px;
+    /* Staatliches */
+    /* Tourney */
+    /* Francois One */
+    /* PT Sans */
+    /* Farro */
+    --max-width: 1440px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: auto; 
+}
+header{
+    width : inherit;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    max-width : var(--max-width);
+    margin: auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: green;
+}
+
+main{
+
+    height: 200vh;
+    background: red;;
+    section{
+
+    }
+    aside{
+
+    }
+
+}
