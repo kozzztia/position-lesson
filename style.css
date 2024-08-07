@@ -28,6 +28,7 @@ ul {
 body {
     width: 100%;
     height: auto;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -181,7 +182,15 @@ main {
             margin-bottom: 40px;    
             width: 100%;   
         }
-        article{
+        span{
+            text-wrap: nowrap;
+        }
+        b{
+            position: relative;
+        }
+        b:before{
+            position: relative;
+            content: "+";
         }
 
     }
