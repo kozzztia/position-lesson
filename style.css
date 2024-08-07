@@ -238,9 +238,17 @@ main {
         content: none;
     }
     .using-links{
-        .image{
-            background: red;
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
         }
+        li{
+            flex: 1;
+        }
+
     }
 
 }
