@@ -28,6 +28,7 @@ ul {
 body {
     width: 100%;
     height: auto;
+    overscroll-behavior: contain;
 }
 
 header {
@@ -223,9 +224,9 @@ main {
         position: relative;
         &::before{
             content: "";
+            background: var(--text-color);
             position: relative;
             display: block;
-            background: red;
             height: 8px;
             width: 100px;
         }
@@ -233,8 +234,13 @@ main {
         align-items: center;
         gap: 20px;
     }
+    li:before{
+        content: none;
+    }
     .using-links{
-        
+        .image{
+            background: red;
+        }
     }
 
 }
