@@ -10,7 +10,7 @@
     /* Farro */
     --max-width: 1200px;
     --padding: 15px;
-    --header-height: 55px;
+    --header-height: 80px;
 }
 
 * {
@@ -36,7 +36,6 @@ header {
     margin: auto;
     padding: var(--padding);
     background: rgba(255, 255, 255, 0.5);
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,7 +46,6 @@ main {
     position: relative;
     max-width: var(--max-width);
     padding-top: var(--header-height);
-    margin-top: var(--header-height);
     margin: auto;
     z-index: 100;
     background: var(--background-color);
@@ -64,7 +62,7 @@ main {
     align-items: self-start;
 
     aside {
-        padding-top: var(--header-height);
+        padding-top:  var(--header-height);
         position: sticky;
         top: 0;
         left: 0;
@@ -72,6 +70,8 @@ main {
     }
     section{
         flex: 5;
+        padding-top:   var(--header-height);
+
     }
 
 
