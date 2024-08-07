@@ -28,7 +28,6 @@ ul {
 body {
     width: 100%;
     height: auto;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -101,8 +100,9 @@ main {
     background-attachment: fixed;
     background-position: top var(--header-height) left 200px;
     background-size: 100% 100%;
-    height: auto;
     /* Example height, adjust as needed */
+    min-height: 200vh;
+
     display: flex;
     flex-direction: row;
     justify-content: stretch;
@@ -145,6 +145,7 @@ main {
         flex: 5;
         padding: var(--header-height) var(--padding);
         color: var(--text-color);
+        width: 100%;
 
         ul {
             display: flex;
@@ -153,47 +154,87 @@ main {
             align-items: start;
         }
 
-        h2 {
-            font-family: Francois One;
-            font-size: var(--title-size);
-            font-weight: 400;
-            line-height: 48px;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            text-wrap: nowrap;
-            margin-bottom: 40px;;
-        }
-
-        sup {
-            font-family: Farro;
-            font-size: 28px;
-            font-weight: 300;
-            line-height: 30px;
-            letter-spacing: 0.04em;
-            text-wrap: nowrap;
-            text-transform: capitalize;
-            margin: 10px;
-        }
-        p{
-            font-family: PT Sans;
-            font-size: var(--text-size);
-            font-weight: 400;
-            line-height: 48px;
-            margin-bottom: 40px;    
-            width: 100%;   
-        }
-        span{
-            text-wrap: nowrap;
-        }
-        b{
+        &>ul>li {
+            padding-top: 40px;
             position: relative;
-        }
-        b:before{
-            position: relative;
-            content: "+";
-        }
 
+            &:before {
+                content: "";
+                background: #000;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 8px;
+            }
+
+            h2 {
+                font-family: Francois One;
+                font-size: var(--title-size);
+                font-weight: 400;
+                line-height: 48px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                text-wrap: nowrap;
+                margin-bottom: 40px;
+                ;
+            }
+
+            sup {
+                font-family: Farro;
+                font-size: 28px;
+                font-weight: 300;
+                line-height: 30px;
+                letter-spacing: 0.04em;
+                text-wrap: nowrap;
+                text-transform: capitalize;
+                margin: 10px;
+            }
+
+            p {
+                font-family: PT Sans;
+                font-size: var(--text-size);
+                font-weight: 400;
+                line-height: 48px;
+                margin-bottom: 40px;
+                width: 100%;
+            }
+
+            span {
+                text-wrap: nowrap;
+            }
+
+            b {
+                position: relative;
+            }
+
+            b:before {
+                position: relative;
+                content: "+";
+            }
+        }
     }
+}
 
+.using-page{
+    flex-direction: column;
+    justify-content: center;
+    h2{
+        position: relative;
+        &::before{
+            content: "";
+            position: relative;
+            display: block;
+            background: red;
+            height: 8px;
+            width: 100px;
+        }
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .using-links{
+        
+    }
 
 }
