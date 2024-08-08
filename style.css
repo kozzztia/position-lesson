@@ -246,7 +246,27 @@ main {
             gap: 30px;
         }
         li{
-            flex: 1;
+            padding: 0;
+            flex-grow: 1;
+            flex-basis: 270px;
+            flex-shrink: 1;
+        }
+        /* a{  
+            position: relative;
+        } */
+        svg{
+            padding: 10px;
+            width: 270px;
+            height: 180px;
+            transition: var(--transition);
+            transform: rotate(0) scale(1);
+            fill: var(--text-color);
+            background: rgba(230, 230, 230, 1);
+            &:hover{
+                transform: rotate(360deg) scale(1.2);
+                fill: var(--background-color);
+                background: #000;
+            };
         }
 
     }
