@@ -92,7 +92,6 @@ header {
 main {
     position: relative;
     max-width: var(--max-width);
-    padding-top: var(--header-height);
     margin: auto;
     z-index: 100;
     background: var(--background-color);
@@ -108,11 +107,12 @@ main {
     flex-direction: row;
     justify-content: stretch;
     align-items: self-start;
+    gap: 30px;
 
     aside {
-        padding: var(--header-height) var(--padding);
+        padding: var(--padding);
         position: sticky;
-        top: 0;
+        top: var(--header-height);
         left: 0;
         flex: 2;
 
@@ -144,7 +144,6 @@ main {
 
     section {
         flex: 5;
-        padding: var(--header-height) var(--padding);
         color: var(--text-color);
         width: 100%;
 
@@ -156,14 +155,14 @@ main {
         }
 
         &>ul>li {
-            padding-top: 40px;
+            padding-top: 100px;
             position: relative;
 
             &:before {
                 content: "";
                 background: #000;
                 position: absolute;
-                top: 0;
+                top: var(--header-height);
                 left: 0;
                 width: 100px;
                 height: 8px;
@@ -220,7 +219,11 @@ main {
 .using-page{
     flex-direction: column;
     justify-content: center;
+    padding-top: var(--header-height);
+    gap:0;
     h2{
+        margin-top: 70px;
+        margin-bottom: 40px;
         position: relative;
         &::before{
             content: "";
@@ -251,9 +254,9 @@ main {
             flex-basis: 270px;
             flex-shrink: 1;
         }
-        /* a{  
+        a{  
             position: relative;
-        } */
+        }
         svg{
             padding: 10px;
             width: 270px;
@@ -264,11 +267,12 @@ main {
             background: rgba(230, 230, 230, 1);
             &:hover{
                 transform: rotate(360deg) scale(1.2);
-                fill: var(--background-color);
-                background: #000;
+                filter: invert()
             };
         }
 
     }
 
 }
+
+/* css- filter-invert */
