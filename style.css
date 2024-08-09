@@ -266,8 +266,10 @@ main {
             fill: var(--text-color);
             background: rgba(230, 230, 230, 1);
             &:hover{
-                transform: rotate(360deg) scale(1.2);
-                filter: invert()
+                transform: rotate(360deg) scale(1.1);
+                box-shadow: 5px 5px 10px #6e6e6e;
+                filter: invert();
+
             };
         }
 
