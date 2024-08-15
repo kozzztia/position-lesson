@@ -86,6 +86,10 @@ header {
         text-decoration: none;
         user-select: none;
     }
+    a:hover{
+        color: red;
+    }
+
 
 }
 
@@ -215,6 +219,10 @@ main {
         }
     }
 }
+:target{
+    color: red !important;
+    background: green !important;
+}
 
 .using-page{
     flex-direction: column;
@@ -257,6 +265,7 @@ main {
         a{  
             position: relative;
         }
+
         svg{
             padding: 10px;
             width: 270px;
@@ -278,3 +287,4 @@ main {
 }
 
 /* css- filter-invert */
+/* flip-card-css */
